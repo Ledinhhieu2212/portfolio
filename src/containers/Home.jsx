@@ -1,4 +1,3 @@
-import '@assets/scss/home.scss';
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
@@ -9,7 +8,8 @@ export default function Home() {
         <div className="text-center w-full">
           <span>Wellcome to my portfolio</span>
           <h1>I'm Lê Đình Hiếu</h1>
-          <b><span>I am a </span> 
+          <b>
+            <span>I am a </span>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

@@ -1,5 +1,4 @@
 import React from 'react';
-import '@assets/scss/contact.scss';
 import Email from '@assets/images/email.svg';
 import FB from '@assets/images/fb.svg';
 import X from '@assets/images/X.svg';
@@ -7,7 +6,7 @@ import Github from '@assets/images/icon.svg';
 export default function Contact() {
   return (
     <section id="contact">
-      <div className="h-full flex items-center justify-around text-center">
+      <div className="flex items-center justify-around text-center">
         <div className=" flex-1 " >
           <a href="mailto:ledinhhieu1212003@gmail.com">
           <img src={Email} alt="" className="mx-auto"/>
