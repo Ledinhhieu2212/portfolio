@@ -1,7 +1,12 @@
-import React from 'react'
-import "~/assets/scss/skill.scss";
+import React from 'react';
+import List from '../components/List';
+import Lists from '~/api/api';
+
+
 export default function Skill() {
   return (
-    <section>Skill</section>
-  )
+    <section id="skill">
+      <List title={Lists.Skill.title} list_item={Lists.Skill.list_item}/>
+    </section>
+  );
 }
