@@ -2,7 +2,7 @@ import React from 'react';
 import Email from '@assets/images/email.svg';
 import FB from '@assets/images/fb.svg';
 import X from '@assets/images/X.svg';
-import Github from '@assets/images/icon.svg';
+import Github from '@assets/images/Icon.svg';
 export default function Contact() {
   return (
     <section id="contact">
