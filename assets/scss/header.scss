@@ -1,0 +1,105 @@
+@import 'responsive.scss';
+
+header {
+  border: 2px solid #000;
+  position: absolute;
+  bottom: 50px;
+  height: 70px;
+  max-width: 900px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    li {
+      justify-content: space-around;
+      list-style: none;
+      width: 25%;
+      text-align: center;
+      align-items: center;
+      a {
+        font-size: 1rem;
+        line-height: 3;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include mobile {
+    top: 0;
+    border: none;
+    opacity: 1;
+    background-color: transparent;
+    z-index: 0;
+    height: 0;
+    ul {
+      display: block;
+      transition: 1s ease-out;
+      width: 100%;
+      height: 380px;
+      z-index: 2;
+      transform: translateY(-100%);
+      li {
+        background-color: #000;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        width: 100%;
+      }
+      &.open{
+        transform: translate(0%);
+      }
+    }
+    .menu-bar {
+      position: absolute;
+      margin-left: auto;
+      top: 0%;
+      right: 0%;
+      width: 70px;
+      height: 70px;
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 10px;
+      z-index: 1000;
+      cursor: pointer;
+      div {
+        position: absolute;
+        content: '';
+        width: 45px;
+        border-radius: 10px;
+        height: 5px;
+        background-color: #000;
+        left: 17%;
+        transition: 1s ease-in-out;
+        &:nth-child(1) {
+          top: 27%;
+        }
+        &:nth-child(2) {
+          top: 47%;
+        }
+        &:nth-child(3) {
+          top: 67%;
+        }
+      }
+      &.open {
+        div {
+          &:nth-child(1) {
+            top: 47%;
+            transform: rotate(-135deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 47%;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+}
